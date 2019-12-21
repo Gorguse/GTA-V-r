@@ -1,0 +1,83 @@
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<link href='https://fonts.googleapis.com/css?family=Roboto:200,300,400,500,600,700' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="dialpad.css">
+		<link rel="stylesheet" type="text/css" href="../_css-js/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="../navbar.css">
+	</head>
+	<body>
+		<div id="bgimg"></div>
+		<form class="contact">
+			<h5 class="phone-header p-2"><i class="far fa-fw fa-phone"></i> Anrufen</h5>
+			<div class="container-fluid">
+				<div class="pad">
+					<div class="dial-pad">
+						<div class="contact"></div>
+						<div class="phoneString">
+							<input id="number" type="text" value="" disabled>
+						</div>
+						<div class="digits">
+							<div class="dig pound number-dig" name="1">1</div>
+							<div class="dig number-dig" name="2">2
+								<div class="sub-dig">ABC</div>
+							</div>
+							<div class="dig number-dig" name="3">3
+								<div class="sub-dig">DEF</div>
+							</div>
+							<div class="dig number-dig" name="4">4
+								<div class="sub-dig">GHI</div>
+							</div>
+							<div class="dig number-dig" name="5">5
+								<div class="sub-dig">JKL</div>
+							</div>
+							<div class="dig number-dig" name="6">6
+								<div class="sub-dig">MNO</div>
+							</div>
+							<div class="dig number-dig" name="7">7
+								<div class="sub-dig">PQRS</div>
+							</div>
+							<div class="dig number-dig" name="8">8
+								<div class="sub-dig">TUV</div>
+							</div>
+							<div class="dig number-dig" name="9">9
+								<div class="sub-dig">WXYZ</div>
+							</div>
+							<div class="dig number-dig pound" name="0">0</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="row justify-content-center">
+					<div class="col-4"><button type="button" class="btn btn-info btn-block p-2 shadow-sm" onclick="buttonaddClicked()"><i class="fa fa-fw fa-user-plus"></i></button></div>
+					<div class="col-4"><button type="button" class="btn btn-danger btn-block p-2 shadow-sm" onclick="buttondeleteClicked()"><i class="fa fa-fw fa-backspace"></i></button></div>
+				</div>
+				<div class="row mt-3 justify-content-center">
+					<div class="col-4"><button type="button" class="btn btn-success btn-block p-2 shadow-sm" onclick="buttoncallClicked()"><i class="fa fa-fw fa-phone"></i></button></div>
+				</div>
+			</div>
+		</div>
+
+		<script src='https://code.jquery.com/jquery-3.4.1.min.js'></script>
+		<script src="dialpad.js"></script>
+		<script src="../_css-js/fontawesome.min.js"></script>
+	</body>
+</html>
+
+<script> 
+	window.addEventListener("keydown", function (event) {
+		var key = event.keyCode;
+		if (key == 96) { var currentValue = $('.phoneString input').val(); $('.phoneString input').val(currentValue + "0"); }
+		if (key == 97) { var currentValue = $('.phoneString input').val(); $('.phoneString input').val(currentValue + "1"); }
+		if (key == 98) { var currentValue = $('.phoneString input').val(); $('.phoneString input').val(currentValue + "2"); }
+		if (key == 99) { var currentValue = $('.phoneString input').val(); $('.phoneString input').val(currentValue + "3"); }
+		if (key == 100) { var currentValue = $('.phoneString input').val(); $('.phoneString input').val(currentValue + "4"); }
+		if (key == 101) { var currentValue = $('.phoneString input').val(); $('.phoneString input').val(currentValue + "5"); }
+		if (key == 102) { var currentValue = $('.phoneString input').val(); $('.phoneString input').val(currentValue + "6"); }
+		if (key == 103) { var currentValue = $('.phoneString input').val(); $('.phoneString input').val(currentValue + "7"); }
+		if (key == 104) { var currentValue = $('.phoneString input').val(); $('.phoneString input').val(currentValue + "8"); }
+		if (key == 105) { var currentValue = $('.phoneString input').val(); $('.phoneString input').val(currentValue + "9"); }
+		if (key == 8) { var currentValue = $('.phoneString input').val(); var newValue = currentValue.substring(0, currentValue.length - 1); $('.phoneString input').val(newValue); }
+		if (key == 13) { var number = document.getElementById("number").value; location.href = "../Phonecalling/phonecalling.html"; mp.trigger("client:Handy:onCall", number); }
+	});
+</script>

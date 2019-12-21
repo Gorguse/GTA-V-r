@@ -1,0 +1,15 @@
+html, body {
+  min-height: 100%;
+}
+
+body {
+  background: transparent;
+  background-size: cover;
+  margin: 0;
+  font-family: Roboto;
+}
+
+::selection {
+  background: #000dff;
+  color: white;
+}

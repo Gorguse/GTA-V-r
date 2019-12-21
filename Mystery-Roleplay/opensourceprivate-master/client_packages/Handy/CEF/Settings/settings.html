@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<link href='https://fonts.googleapis.com/css?family=Roboto:200,300,400,500,600,700' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="settings.css">
+		<link rel="stylesheet" type="text/css" href="../_css-js/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="../navbar.css">
+	</head>
+
+	<body>
+		<div id="bgimg"></div>
+		<div id="navbar"></div>
+		
+		<form class="contact">
+			<h5 class="phone-header p-2"><i class="far fa-fw fa-cogs"></i> Einstellungen</h5>
+			<div class="container-fluid">
+				<div class="form-group">
+					<label class="font-weight-bold text-white"><u>Handynummer</u></label>
+					<div class="input-group">
+						<div class="input-group-prepend">
+							<div class="input-group-text"><i class="fa fa-fw fa-phone"></i></div>
+						</div>
+						<input type="text" class="form-control form-control-sm" id="nummer" value="" readonly>
+					</div>
+				</div>
+				<div class="form-group">
+					<!--<div class="custom-control custom-checkbox mr-sm-2">
+						<input type="checkbox" class="custom-control-input" id="rufnummer_unterdruecken">
+						<label class="custom-control-label font-weight-bold text-white" for="rufnummer_unterdruecken">Rufnummer unterdrücken</label>
+					</div>
+					<div class="custom-control custom-checkbox mr-sm-2">
+						<input type="checkbox" class="custom-control-input" id="handy_ausschalten">
+						<label class="custom-control-label font-weight-bold text-white" for="handy_ausschalten">Handy ausschalten</label>
+					</div>-->
+				</div>
+			</div>
+		</form>
+
+		<script src='https://code.jquery.com/jquery-3.4.1.min.js'></script>
+		<script>
+			var url = new URL(window.location.href);
+			var number = url.searchParams.get("phoneNumber");
+			document.getElementById("nummer").value = number;
+		</script>
+		<script src="settings.js"></script>
+		<script src="../_css-js/fontawesome.min.js"></script>
+	</body>
+</html>

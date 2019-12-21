@@ -1,0 +1,39 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<script src="main.js" async></script>
+		<link rel="stylesheet" type="text/css" href="main.css">
+		<link rel="stylesheet" type="text/css" href="../navbar.css">
+	</head>
+	<body onload="setTimeDate()">
+		<div id="bgimg"></div>
+		<div id="time"><center></center></div>
+		<div id="date"><center></center></div>
+		<div id="icon_phone" class="icons" onclick="phoneClicked()"></div>
+		<div id="icon_power" class="icons" onclick="powerClicked()"></div>
+		<div id="icon_contacts" class="icons" onclick="contactsClicked()"></div>
+		<div id="icon_sms" class="icons" onclick="smsClicked()"></div>
+		<div id="icon_email" class="icons" onclick="emailClicked()"></div>
+		<div id="icon_settings" class="icons" onclick="settingsClicked()"></div>
+		<div id="icon_dispatches" class="icons" onclick="dispatchesClicked()"></div>
+		<div id="icon_bank" class="icons" onclick="bankClicked()"></div>
+		<div id="icon_gesetze" class="icons" onclick="gesetzeClicked()"></div>
+		<div id="icon_news" class="icons" onclick="newsClicked()"></div>
+
+		<script>
+			window.onload = function(){
+			document.getElementById("icon_phone").style.opacity = 1;
+			//document.getElementById("icon_power").style.opacity = 1;
+			document.getElementById("icon_contacts").style.opacity = 1;
+			document.getElementById("icon_sms").style.opacity = 1;
+			document.getElementById("icon_email").style.opacity = .45;
+			document.getElementById("icon_settings").style.opacity = 1;
+			document.getElementById("icon_dispatches").style.opacity = 1;
+			document.getElementById("icon_bank").style.opacity = 1;
+			document.getElementById("icon_gesetze").style.opacity = .45;
+			document.getElementById("icon_news").style.opacity = .45;
+			}
+		</script>
+
+	</body>
+</html>

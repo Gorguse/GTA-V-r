@@ -1,0 +1,16 @@
+html, body {
+	-ms-user-select: None; 
+ 	-moz-user-select: None; 
+ 	-webkit-user-select: None; 
+	margin: 0;
+	height: 100%;
+	overflow: hidden;
+	background-color: #00000000;
+}
+
+body {
+  background: transparent;
+  background-size: cover;
+  margin: 0;
+  font-family: Roboto;
+}

@@ -1,0 +1,34 @@
+body{
+	background:transparent;
+	-webkit-user-select: none;
+}
+
+.icon{ 
+	-webkit-user-select: none;
+	visibility: visible;
+	position: absolute;
+	height: 4%;
+	width: 5%;
+	background-size:contain;
+}
+
+#food{
+	background-image: url("./food0.png");
+  	background-repeat: no-repeat;
+	bottom: 46%;
+	left: 0%;
+}
+
+#drink{
+	background-image: url("./drink0.png");
+  	background-repeat: no-repeat;
+	bottom: 54%;
+	left: 0%;
+}
+
+#voice{
+	background-image: url("./laut0.png");
+  	background-repeat: no-repeat;
+	bottom: 50%;
+	left: 0%;
+}

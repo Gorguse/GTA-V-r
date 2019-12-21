@@ -1,0 +1,28 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<script src="fleeca.js" async></script>
+		<link href='https://fonts.googleapis.com/css?family=Roboto:200,300,400,500,600,700' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" type="text/css" href="fleeca.css">
+		<link rel="stylesheet" type="text/css" href="../_css-js/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="../navbar.css">
+	</head>
+	<body onload="getBankAmount()">
+		<div id="bgimg"></div>
+
+		<div class="container-fluid">
+			<div class="text-center mt-5"><img src="fleeca.png" id="fleecalogo"></div>
+			<div class="text-center mt-5">
+				<h3 class="font-weight-bold text-white"><u>Kontostand:</u></h3>
+				<h5 class="text-white" id="amount"></h5>
+			</div>
+		</div>
+
+		<script>
+			var url = new URL(window.location.href);
+			var amount = Number.parseFloat(url.searchParams.get("amount")).toFixed(2);
+			document.getElementById("amount").innerHTML = "<i class=\"fa fa-fw fa-money-bill\"></i> " + amount + " $";
+		</script>
+		<script src="../_css-js/fontawesome.min.js"></script>
+	</body>
+</html>
